@@ -30,28 +30,3 @@ class interface:
     @staticmethod
     def get_method_list(klass):
         return [func for func in dir(klass) if callable(getattr(klass, func)) and not func.startswith("__")]
-
-
-class Iterable:
-    def do_loop(self):
-        pass
-
-@interface(Iterable)
-class BusList:
-    def be_iterable(self):
-        print('I\'m a bus.')
-
-    def do_loop(self):
-        print('got it!')
-
-bl = BusList()
-bl.be_iterable()
-bl.do_loop()
-
-# TODO make this better
-print('type', type(bl))
-# <class '__main__.interface.__call__.<locals>.NewKlass'>
-print('BusList?', isinstance(bl, BusList))
-# True
-print('Iterable?', isinstance(bl, Iterable))
-# False
