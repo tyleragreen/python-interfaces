@@ -1,5 +1,4 @@
-class InterfaceException(Exception):
-    pass
+from .exceptions import InterfaceException
 
 
 class interface:
