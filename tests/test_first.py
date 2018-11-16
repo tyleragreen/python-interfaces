@@ -15,10 +15,16 @@ class BusList:
         return 'got it!'
 
 
-def test_create():
+def test_can_create_object_with_respects_interface():
     bl = BusList()
     assert bl.be_iterable() == 'I\'m a bus.'
     assert bl.do_loop() == 'got it!'
+
+
+def test_isintance_of_correct_class():
+    bl = BusList()
+    assert isinstance(bl, BusList) == True
+    assert isinstance(bl, Iterable) == False
 
 
 # # TODO make this better
