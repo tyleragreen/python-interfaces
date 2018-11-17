@@ -23,8 +23,8 @@ def test_can_create_object_with_respects_interface():
 
 def test_isintance_of_correct_class():
     bl = BusList()
-    assert isinstance(bl, BusList) == True
-    assert isinstance(bl, Iterable) == False
+    assert isinstance(bl, BusList) is True
+    assert isinstance(bl, Iterable) is False
 
 
 # # TODO make this better
