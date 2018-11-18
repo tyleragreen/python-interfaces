@@ -8,16 +8,21 @@ class Iterable:
 
 @interface(Iterable)
 class BusList:
-    def be_iterable(self):
-        return 'I\'m a bus.'
+    def normal_method(self):
+        return 'bus here'
 
     def do_loop(self):
         return 'got it!'
 
 
+class CarList:
+    def normal_method(self):
+        return 'car here'
+
+
 def test_can_create_object_with_respects_interface():
     bl = BusList()
-    assert bl.be_iterable() == 'I\'m a bus.'
+    assert bl.normal_method() == 'bus here'
     assert bl.do_loop() == 'got it!'
 
 
@@ -27,10 +32,9 @@ def test_isintance_of_correct_class():
     assert isinstance(bl, Iterable) is False
 
 
-# # TODO make this better
-# print('type', type(bl))
-# # <class '__main__.interface.__call__.<locals>.NewKlass'>
-# print('BusList?', isinstance(bl, BusList))
-# # True
-# print('Iterable?', isinstance(bl, Iterable))
-# # False
+def test_assert_type_correct():
+    bl = BusList()
+    assert type(bl) == BusList
+    assert type(bl) != CarList
+    # TODO check type string
+    # <class '__main__.interface.__call__.<locals>.NewKlass'>
