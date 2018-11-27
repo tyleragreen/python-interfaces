@@ -34,12 +34,12 @@ def test_type_respects_inheritance():
     assert type(bl) != VehicleList
 
 
-def test_issubclass():
+def test_issubclass_respects_inheritance():
     assert issubclass(VehicleList, AbstractList)
     assert issubclass(BusList, VehicleList)
 
 
-def test_isinstance_respect_inheritance():
+def test_isinstance_respects_inheritance():
     vl = VehicleList()
     assert isinstance(vl, VehicleList)
     assert isinstance(vl, AbstractList)
