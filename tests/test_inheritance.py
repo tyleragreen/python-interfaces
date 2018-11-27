@@ -1,4 +1,7 @@
+import pytest
+
 from interface import interface
+
 
 class Iterable:
     def do_loop(self):
@@ -29,6 +32,11 @@ def test_type_respects_inheritance():
     assert type(bl) == BusList
     assert type(bl) != Iterable
     assert type(bl) != VehicleList
+
+
+def test_issubclass():
+    assert issubclass(VehicleList, AbstractList)
+    assert issubclass(BusList, VehicleList)
 
 
 def test_isinstance_respect_inheritance():

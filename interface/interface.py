@@ -2,16 +2,16 @@ from .exceptions import InterfaceException
 
 
 class interface:
-    def __init__(self, interface_klass):
+    def __init__(self, interface_klass, *args, **kwargs):
         self.required_methods = self.get_method_list(interface_klass)
 
-    def __call__(self, Klass):
+    def __call__(self, Klass, *args, **kwargs):
         missing_methods = [method for method in self.required_methods if method not in self.get_method_list(Klass)]
         if not len(missing_methods) == 0:
             method_list = ','.join(missing_methods)
             raise InterfaceException(f'Missing interface methods: {method_list}')
 
-        class NewKlass:
+        class NewKlass(*Klass.__bases__):
             def __init__(self, *args, **kwargs):
                 self.og = Klass(*args, **kwargs)
 
