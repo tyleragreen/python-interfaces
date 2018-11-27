@@ -10,5 +10,6 @@ py.test
 1. Basic Functionality
 1. Raises Exception (at instantiation time or declaration time?)
 1. Respect Inheritance
+1. Respests Multiple Inheritance
 1. Works with hidden methods (is that what you call `__call__`, etc?)
 1. Checks method signatures?
