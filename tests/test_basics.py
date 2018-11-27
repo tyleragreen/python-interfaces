@@ -20,7 +20,7 @@ class CarList:
         return 'car here'
 
 
-def test_can_create_object_with_respects_interface():
+def test_can_create_object_which_respects_interface():
     bl = BusList()
     assert bl.normal_method() == 'bus here'
     assert bl.do_loop() == 'got it!'
