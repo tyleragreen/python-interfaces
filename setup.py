@@ -11,7 +11,7 @@ with io.open('interface/__version__.py', 'r', encoding='utf-8') as f:
     exec(f.read(), about)
 
 setup(
-    name="python-interface",
+    name="python-interfaces",
     version=about['__version__'],
     description='Bringing interfaces to Python.',
     long_description=readme,
