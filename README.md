@@ -21,14 +21,14 @@ class Foo:
 ```
 ## Local Development
 ```
-git clone https://github.com/tyleragreen/python-interface.git
+git clone https://github.com/tyleragreen/python-interface.git && cd python-interface
 virtualenv ~/.env/interface
 source ~/.env/interface/bin/activate
 
 pip install -r requirements_dev.txt
 
 # Since the tests live outside the package, we install the package in editable mode
-pip install -e
+pip install -e .
 py.test
 ```
 ## Other Ideas
