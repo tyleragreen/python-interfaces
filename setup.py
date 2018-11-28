@@ -18,5 +18,6 @@ setup(
     author='Tyler Green',
     author_email='greent@tyleragreen.com',
     url='https://github.com/tyleragreen/python-interface',
-    packages=find_packages(include=['interface'])
+    packages=find_packages(include=['interface']),
+    license='MIT license',
 )
