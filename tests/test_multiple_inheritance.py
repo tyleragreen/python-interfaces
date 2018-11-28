@@ -8,18 +8,18 @@ class Iterable:
         pass
 
 
-class AbstractList:
-    def another_method(self):
-        return 'not much here'
-
-
-class VehicleList(AbstractList):
+class VehicleList:
     def another_method(self):
         return 'vehicles are cool'
 
 
+class PublicTransportVehicle:
+    def __init__(self):
+        pass
+
+
 @interface(Iterable)
-class BusList(VehicleList):
+class BusList(PublicTransportVehicle, VehicleList):
     def do_loop(self):
         return 'looping bus'
 
@@ -32,20 +32,17 @@ def test_type_respects_inheritance():
     assert type(bl) == BusList
     assert type(bl) != Iterable
     assert type(bl) != VehicleList
+    assert type(bl) != PublicTransportVehicle
 
 
 def test_issubclass_respects_inheritance():
-    assert issubclass(VehicleList, AbstractList)
     assert issubclass(BusList, VehicleList)
+    assert issubclass(BusList, PublicTransportVehicle)
 
 
 def test_isinstance_respects_inheritance():
-    vl = VehicleList()
-    assert isinstance(vl, VehicleList)
-    assert isinstance(vl, AbstractList)
-
     bl = BusList()
     assert isinstance(bl, BusList)
     assert isinstance(bl, VehicleList)
-    assert isinstance(bl, AbstractList)
+    assert isinstance(bl, PublicTransportVehicle)
     assert not isinstance(bl, Iterable)
