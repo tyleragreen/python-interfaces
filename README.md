@@ -32,6 +32,6 @@ pip install -e .
 py.test
 ```
 ## Other Ideas
-1. Works with [dunder](https://dbader.org/blog/meaning-of-underscores-in-python) methods
-1. Checks method [signatures](https://docs.python.org/3.6/library/inspect.html#inspect.signature)
+1. Support [dunder](https://dbader.org/blog/meaning-of-underscores-in-python) methods
+1. Enforce method [signatures](https://docs.python.org/3.6/library/inspect.html#inspect.signature)
 1. Require interface methods to be empty/abstract/`pass`-only
