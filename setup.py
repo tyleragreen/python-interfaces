@@ -15,6 +15,7 @@ setup(
     version=about['__version__'],
     description='Bringing interfaces to Python.',
     long_description=readme,
+    long_description_content_type='text/markdown',
     author='Tyler Green',
     author_email='greent@tyleragreen.com',
     url='https://github.com/tyleragreen/python-interface',
