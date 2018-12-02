@@ -1,8 +1,8 @@
-# python-interface
+# python-interfaces
 [![CircleCI](https://circleci.com/gh/tyleragreen/python-interface.svg?style=svg)](https://circleci.com/gh/tyleragreen/python-interface)
 ## Installation
 ```
-pip install python-interface
+pip install python-interfaces
 ```
 ## Usage
 ```
@@ -21,7 +21,7 @@ class Foo:
 ```
 ## Local Development
 ```
-git clone https://github.com/tyleragreen/python-interface.git && cd python-interface
+git clone https://github.com/tyleragreen/python-interfaces.git && cd python-interfaces
 virtualenv ~/.env/interface
 source ~/.env/interface/bin/activate
 
