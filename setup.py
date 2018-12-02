@@ -18,7 +18,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Tyler Green',
     author_email='greent@tyleragreen.com',
-    url='https://github.com/tyleragreen/python-interface',
+    url='https://github.com/tyleragreen/python-interfaces',
     packages=find_packages(include=['interface']),
     license='MIT license',
 )
