@@ -1,5 +1,5 @@
 # python-interfaces
-[![CircleCI](https://circleci.com/gh/tyleragreen/python-interface.svg?style=svg)](https://circleci.com/gh/tyleragreen/python-interface)
+[![CircleCI](https://circleci.com/gh/tyleragreen/python-interfaces.svg?style=svg)](https://circleci.com/gh/tyleragreen/python-interfaces)
 ## Installation
 ```
 pip install python-interfaces
