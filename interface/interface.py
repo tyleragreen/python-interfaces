@@ -2,17 +2,22 @@ from .exceptions import InterfaceException
 
 
 class interface:
-    def __init__(self, interface_klass, *args, **kwargs):
-        self.required_methods = self.get_method_list(interface_klass)
+    def __init__(self, interface_klass) -> None:
+        self.required_methods: list[str] = \
+            self.get_method_list(interface_klass)
 
-    def __call__(self, Klass, *args, **kwargs):
-        missing_methods = [method for method in self.required_methods if method not in self.get_method_list(Klass)]
+    def __call__(self, Klass):
+        missing_methods: list[str] = [
+                method for method in self.required_methods
+                if method not in self.get_method_list(Klass)
+                ]
         if not len(missing_methods) == 0:
             method_list = ','.join(missing_methods)
-            raise InterfaceException(f'Missing interface methods: {method_list}')
+            error = f'Missing interface methods: {method_list}'
+            raise InterfaceException(error)
 
         class NewKlass(*Klass.__bases__):
-            def __init__(self, *args, **kwargs):
+            def __init__(self, *args, **kwargs) -> None:
                 self.og = Klass(*args, **kwargs)
 
             def __getattribute__(self, attr):
@@ -27,5 +32,8 @@ class interface:
         return NewKlass
 
     @staticmethod
-    def get_method_list(klass):
-        return [func for func in dir(klass) if callable(getattr(klass, func)) and not func.startswith("__")]
+    def get_method_list(klass) -> list[str]:
+        return [
+                func for func in dir(klass)
+                if callable(getattr(klass, func)) and not func.startswith("__")
+                ]
