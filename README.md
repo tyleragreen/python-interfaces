@@ -29,7 +29,8 @@ pip install -r requirements_dev.txt
 
 # Since the tests live outside the package, we install the package in editable mode
 pip install -e .
-py.test
+pytest
+pyright
 ```
 ## Other Ideas
 1. Support [dunder](https://dbader.org/blog/meaning-of-underscores-in-python) methods
