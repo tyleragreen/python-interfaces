@@ -28,7 +28,14 @@ pip install -r requirements.txt
 
 # Since the tests live outside the package, we install the package in editable mode
 pip install -e .
+
+# Test
 pytest
+
+# Lint
+flake8
+
+# Check static types
 pyright
 ```
 ## Other Ideas
