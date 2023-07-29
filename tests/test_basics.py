@@ -35,8 +35,6 @@ def test_isintance_of_correct_class():
 
 def test_assert_type_correct():
     bl = BusList()
-    assert type(bl) == BusList
-    assert type(bl) != Iterable
-    assert type(bl) != CarList
-    # TODO check type string
-    # <class '__main__.interface.__call__.<locals>.NewKlass'>
+    assert type(bl) is BusList
+    assert type(bl) is not Iterable
+    assert type(bl) is not CarList

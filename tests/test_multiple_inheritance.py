@@ -1,5 +1,3 @@
-import pytest
-
 from interface import interface
 
 
@@ -29,10 +27,10 @@ class BusList(PublicTransportVehicle, VehicleList):
 
 def test_type_respects_inheritance():
     bl = BusList()
-    assert type(bl) == BusList
-    assert type(bl) != Iterable
-    assert type(bl) != VehicleList
-    assert type(bl) != PublicTransportVehicle
+    assert type(bl) is BusList
+    assert type(bl) is not Iterable
+    assert type(bl) is not VehicleList
+    assert type(bl) is not PublicTransportVehicle
 
 
 def test_issubclass_respects_inheritance():
