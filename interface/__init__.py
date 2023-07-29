@@ -1,2 +1,2 @@
-from .interface import interface
-from .exceptions import InterfaceException
+from .interface import interface # noqa
+from .exceptions import InterfaceException # noqa
