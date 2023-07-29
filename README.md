@@ -1,5 +1,4 @@
 # python-interfaces
-[![CircleCI](https://circleci.com/gh/tyleragreen/python-interfaces.svg?style=svg)](https://circleci.com/gh/tyleragreen/python-interfaces)
 ## Installation
 ```
 pip install python-interfaces
@@ -25,7 +24,7 @@ git clone https://github.com/tyleragreen/python-interfaces.git && cd python-inte
 virtualenv ~/.env/interface
 source ~/.env/interface/bin/activate
 
-pip install -r requirements_dev.txt
+pip install -r requirements.txt
 
 # Since the tests live outside the package, we install the package in editable mode
 pip install -e .
