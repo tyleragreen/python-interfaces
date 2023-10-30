@@ -1,3 +1,3 @@
 pytest==7.4.2
-pyright==1.1.332
+pyright==1.1.333
 flake8==6.1.0
