@@ -7,7 +7,7 @@ class Iterable:
 
 
 class VehicleList:
-    def another_method(self):
+    def another_method(self) -> str:
         return 'vehicles are cool'
 
 
@@ -21,7 +21,7 @@ class BusList(PublicTransportVehicle, VehicleList):
     def do_loop(self):
         return 'looping bus'
 
-    def another_method(self):
+    def another_method(self) -> str:
         return 'especially buses'
 
 
