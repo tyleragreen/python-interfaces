@@ -7,12 +7,12 @@ class Iterable:
 
 
 class AbstractList:
-    def another_method(self):
+    def another_method(self) -> str:
         return 'not much here'
 
 
 class VehicleList(AbstractList):
-    def another_method(self):
+    def another_method(self) -> str:
         return 'vehicles are cool'
 
 
@@ -21,7 +21,7 @@ class BusList(VehicleList):
     def do_loop(self):
         return 'looping bus'
 
-    def another_method(self):
+    def another_method(self) -> str:
         return 'especially buses'
 
 
