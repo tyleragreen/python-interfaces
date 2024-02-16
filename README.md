@@ -29,14 +29,17 @@ pip install -r requirements.txt
 # Since the tests live outside the package, we install the package in editable mode
 pip install -e .
 
-# Test
-pytest
+# Format
+black .
 
 # Lint
-flake8
+ruff .
 
 # Check static types
 pyright
+
+# Test
+pytest
 ```
 ## Other Ideas
 1. Support [dunder](https://dbader.org/blog/meaning-of-underscores-in-python) methods
