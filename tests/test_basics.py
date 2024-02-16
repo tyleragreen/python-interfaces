@@ -9,21 +9,21 @@ class Iterable:
 @interface(Iterable)
 class BusList:
     def normal_method(self):
-        return 'bus here'
+        return "bus here"
 
     def do_loop(self):
-        return 'got it!'
+        return "got it!"
 
 
 class CarList:
     def normal_method(self):
-        return 'car here'
+        return "car here"
 
 
 def test_can_create_object_which_respects_interface():
     bl = BusList()
-    assert bl.normal_method() == 'bus here'
-    assert bl.do_loop() == 'got it!'
+    assert bl.normal_method() == "bus here"
+    assert bl.do_loop() == "got it!"
 
 
 def test_isintance_of_correct_class():

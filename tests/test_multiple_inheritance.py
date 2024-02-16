@@ -8,7 +8,7 @@ class Iterable:
 
 class VehicleList:
     def another_method(self) -> str:
-        return 'vehicles are cool'
+        return "vehicles are cool"
 
 
 class PublicTransportVehicle:
@@ -19,10 +19,10 @@ class PublicTransportVehicle:
 @interface(Iterable)
 class BusList(PublicTransportVehicle, VehicleList):
     def do_loop(self):
-        return 'looping bus'
+        return "looping bus"
 
     def another_method(self) -> str:
-        return 'especially buses'
+        return "especially buses"
 
 
 def test_type_respects_inheritance():

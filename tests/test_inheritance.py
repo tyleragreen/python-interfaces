@@ -8,21 +8,21 @@ class Iterable:
 
 class AbstractList:
     def another_method(self) -> str:
-        return 'not much here'
+        return "not much here"
 
 
 class VehicleList(AbstractList):
     def another_method(self) -> str:
-        return 'vehicles are cool'
+        return "vehicles are cool"
 
 
 @interface(Iterable)
 class BusList(VehicleList):
-    def do_loop(self):
-        return 'looping bus'
+    def do_loop(self) -> str:
+        return "looping bus"
 
     def another_method(self) -> str:
-        return 'especially buses'
+        return "especially buses"
 
 
 def test_type_respects_inheritance():
