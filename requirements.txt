@@ -1,4 +1,4 @@
 pytest==8.0.0
 pyright==1.1.350
-ruff==0.2.1
+ruff==0.2.2
 black==24.2.0
