@@ -1,4 +1,4 @@
 pytest==8.1.1
-pyright==1.1.353
+pyright==1.1.354
 ruff==0.3.2
 black==24.3.0
